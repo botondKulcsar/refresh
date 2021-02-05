@@ -1,0 +1,66 @@
+/* **Challenge**:
+Your main goal is to use CSS to style the given landing page and make it look better.
+
+**Hints:**
+ - Think about fonts and colors.
+ - Remember positioning in CSS!
+
+**Topics Covered:**
+ - Display
+ - Margin/Padding
+ - Colors
+ - Fonts
+ 
+ **Other Information**:
+ - Font Used: Lato
+ - Header background color: #2e354f
+ - Underlined text color & button background color: #ef5839
+ - Hovered button background color: #d4b44c
+ - Hovered button text color: #2e354f */
+
+body {
+    margin: 0;
+    font-family: 'Lato';
+    font-size: 18px;
+}
+
+.container {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-bottom: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.title-section {
+    background: #2e354f;
+    color: white;
+    padding: 24px 0;
+    max-width: 500px;
+}
+
+span {
+    color: #ef5839;
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    background: #ef5839;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #d4b44c;
+}
