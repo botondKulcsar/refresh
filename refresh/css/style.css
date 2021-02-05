@@ -36,10 +36,11 @@ p {
     color: #ffe600;
 }
 
-a:link,
+
+/* a:link,
 a:visited {
     color: #ffe600;
-}
+} */
 
 a:focus {
     color: aquamarine;
@@ -51,4 +52,25 @@ a:hover {
 
 a:active {
     color: green;
+}
+
+
+/* always use PADDING for sizing buttons, NOT WIDTH and HEIGHT */
+
+
+/* use 1:2,5 or 1:2 ratio for padding */
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background: #ffe600;
+    color: black;
+    padding: 15px 30px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.button:hover {
+    background: orange;
 }
