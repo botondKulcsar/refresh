@@ -1,0 +1,70 @@
+*,
+html,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.subcontainer {
+    max-width: 620px;
+    border: 1px solid fuchsia;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header,
+.section-two {
+    background: #2e354f;
+    color: white;
+    padding: 48px 0;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h2 {
+    color: #ef5839;
+    margin-bottom: 18px;
+}
+
+.section-one,
+.section-two {
+    padding: 48px 0;
+}
+
+.section-one p {
+    color: #2e354f;
+}
+
+.section-two p {
+    margin-bottom: 18px;
+}
+
+.links {
+    padding-top: 18px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 25px;
+}
+
+.btn:first-of-type {
+    background: #ef5839;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn:last-of-type {
+    background: white;
+    color: #2e354f;
+}
