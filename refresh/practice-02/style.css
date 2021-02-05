@@ -12,7 +12,7 @@ body {
 
 .subcontainer {
     max-width: 620px;
-    border: 1px solid fuchsia;
+    /* border: 1px solid fuchsia; */
     margin: 0 auto;
     padding: 0;
 }
