@@ -1,9 +1,36 @@
 const slides = document.getElementsByClassName('carousel-item');
-// const visibleSlide = document.getElementsByClassName('carousel-item-visible')[0];
+
 const totalSlides = slides.length;
+
+const playBtn = document.getElementById('play');
+const stopBtn = document.getElementById('stop');
+
+
+// automatic slide trasnistion
+let interval = setInterval(() => {
+    moveToNextSlide()
+}, 3000);
+
+// when clicking on play button 
+playBtn.addEventListener('click', () => {
+    moveToNextSlide();
+    interval = setInterval(() => {
+        moveToNextSlide()
+    }, 3000);
+
+})
+
+// when clicking the stop button
+
+stopBtn.addEventListener('click', () => {
+    clearInterval(interval);
+});
+
 // creating slide indicators
 const indicatorHolder = document.querySelector('.indicators');
 indicatorHolder.innerHTML = '';
+
+
 
 for (let i = 0; i < totalSlides; i++) {
     indicatorHolder.innerHTML += `<div class="indicator" id="${i}"></div>`
@@ -16,10 +43,7 @@ const nextBtn = document.getElementById('carousel-button-next');
 const prevBtn = document.getElementById('carousel-button-prev');
 
 
-// automatic slide trasnistion
-const interval = setInterval(() => {
-    moveToNextSlide()
-}, 3000);
+
 
 // stop automatic playing
 for (const slide of slides) {
@@ -72,7 +96,7 @@ function removeActiveClassFromIndicators() {
 
 for (const indicator of indicators) {
     indicator.addEventListener('click', () => {
-        clearInterval(interval);
+        // clearInterval(interval);
         hideAllSlides();
         removeActiveClassFromIndicators();
         const indicatorId = parseInt(indicator.id);

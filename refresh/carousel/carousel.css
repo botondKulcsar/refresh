@@ -60,6 +60,12 @@
     width: 40px;
     height: 40px;
     outline: none;
+    opacity: 0.7;
+}
+
+.carousel-actions button:hover {
+    opacity: 1;
+    transition: all ease 300ms;
 }
 
 #carousel-button-prev {
@@ -81,15 +87,40 @@
 }
 
 .indicator {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: whitesmoke;
     opacity: 0.8;
     cursor: pointer;
 }
 
 .active {
-    background: firebrick;
+    border: 1px solid firebrick;
     transform: scale(1.5);
+    opacity: 1;
+    transition: all ease 300ms;
+}
+
+.controls {
+    position: absolute;
+    width: 96%;
+    bottom: 5%;
+    left: 2%;
+    right: 2%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.controls button {
+    font-size: 26px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    opacity: 0.6;
+}
+
+.controls button:hover {
+    opacity: 1;
     transition: all ease 300ms;
 }
