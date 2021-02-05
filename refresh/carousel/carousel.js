@@ -1,9 +1,24 @@
 const slides = document.getElementsByClassName('carousel-item');
+const visibleSlide = document.getElementsByClassName('carousel-item-visible')[0];
 const totalSlides = slides.length;
 
 let slidePosition = 0;
 const nextBtn = document.getElementById('carousel-button-next');
 const prevBtn = document.getElementById('carousel-button-prev');
+
+
+
+const interval = setInterval(() => {
+    moveToNextSlide()
+}, 3000);
+
+for (const slide of slides) {
+    slide.addEventListener('click', function() {
+        clearInterval(interval);
+    })
+}
+
+
 
 nextBtn.addEventListener('click', moveToNextSlide);
 

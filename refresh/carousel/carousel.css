@@ -20,6 +20,7 @@
 
 .carousel-item-visible {
     display: block;
+    cursor: pointer;
     animation: fadeVisibility 0.5s;
 }
 
