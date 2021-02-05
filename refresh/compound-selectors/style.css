@@ -1,11 +1,13 @@
 body {
     margin: 0;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
 h1,
 h2,
 p {
     margin-top: 0;
+    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 h1 {
