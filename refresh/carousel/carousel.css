@@ -20,7 +20,6 @@
 
 .carousel-item-visible {
     display: block;
-    cursor: pointer;
     animation: fadeVisibility 0.5s;
 }
 
@@ -69,4 +68,28 @@
 
 #carousel-button-next {
     margin-right: 20px;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    left: 30%;
+    right: 30%;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    background: whitesmoke;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.active {
+    background: firebrick;
+    transform: scale(1.5);
+    transition: all ease 300ms;
 }
