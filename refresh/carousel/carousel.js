@@ -13,7 +13,7 @@ let interval = setInterval(() => {
 
 // when clicking on play button 
 playBtn.addEventListener('click', () => {
-    moveToNextSlide();
+
     interval = setInterval(() => {
         moveToNextSlide()
     }, 3000);
@@ -36,9 +36,13 @@ for (let i = 0; i < totalSlides; i++) {
     indicatorHolder.innerHTML += `<div class="indicator" id="${i}"></div>`
 }
 
+
 const indicators = document.getElementsByClassName('indicator');
+indicators[0].classList.add('active');
 
 let slidePosition = 0;
+
+
 const nextBtn = document.getElementById('carousel-button-next');
 const prevBtn = document.getElementById('carousel-button-prev');
 
@@ -101,6 +105,7 @@ for (const indicator of indicators) {
         removeActiveClassFromIndicators();
         const indicatorId = parseInt(indicator.id);
         slides[indicatorId].classList.add('carousel-item-visible');
+        slidePosition = indicatorId;
         indicator.classList.add('active');
     })
 }
