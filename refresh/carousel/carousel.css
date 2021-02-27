@@ -1,3 +1,10 @@
+*,
+html,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .carousel {
     max-width: 600px;
     position: relative;
@@ -6,6 +13,8 @@
 
 .carousel-item {
     display: none;
+    max-height: 600px;
+    overflow: hidden;
 }
 
 .carousel-item-hidden {
@@ -80,10 +89,10 @@
     position: absolute;
     bottom: 10%;
     display: flex;
-    width: 40%;
+    width: 60%;
     justify-content: space-evenly;
-    left: 30%;
-    right: 30%;
+    left: 20%;
+    right: 20%;
 }
 
 .indicator {
